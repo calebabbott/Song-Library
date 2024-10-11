@@ -21,7 +21,7 @@ document.getElementById('login-form').addEventListener('submit', async function(
     } else {
         console.log('Login successful:', data);
         // Redirect to index.html upon successful login
-        window.location.href = 'mychurch.html'; // Adjust the path as needed
+        window.location.href = 'index.html'; // Adjust the path as needed
     }
 });
 
