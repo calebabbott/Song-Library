@@ -1,4 +1,4 @@
-import "./mychurch.css";
+import "./index.css";
 import { createClient } from '@supabase/supabase-js'
 const supabaseUrl = '' //Add your SupaBase URL 
 const supabaseKey = process.env.SUPABASE_KEY; //Create .env file for your SupaBase Key
@@ -305,7 +305,7 @@ document.addEventListener('DOMContentLoaded', async function () {
             console.error('Error logging out:', error.message);
         } else {
             console.log('Logout successful:');
-            // Redirect to mychurch.html upon successful login
+            // Redirect to index.html upon successful login
             window.location.href = '/login.html'; // Adjust the path as needed
         }
     })
@@ -374,11 +374,11 @@ const checkSession = async () => {
     if (error) {
         console.error('Error retrieving session:', error.message);
     } else {
-        if (!session && window.location.pathname.includes('mychurch.html')) {
+        if (!session && window.location.pathname.includes('index.html')) {
             // No active session, redirect to login page
             window.location.href = 'login.html'; 
         } else if (session && window.location.pathname.includes('login.html')) {
-            window.location.href = 'mychurch.html'
+            window.location.href = 'index.html'
         }
     }
 };
