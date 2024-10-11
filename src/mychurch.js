@@ -1,7 +1,7 @@
 import "./mychurch.css";
 import { createClient } from '@supabase/supabase-js'
 const supabaseUrl = ''
-const supabaseKey = process.env.SUPABASE_KEY || '';
+const supabaseKey = process.env.SUPABASE_KEY;
 const supabase = createClient(supabaseUrl, supabaseKey)
 const logOut = document.getElementById('log-out');
 
