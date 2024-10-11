@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    
+    <title>MyChurchSongs</title>
+</head>
+<body>
+    <header id="sp-header">
+        <div id="sp-logo">
+            <a href="mychurch.html" target="_self">
+                <img src="https://storage2.snappages.site/C9SH6X/assets/images/7988834_4105x957_500.png" width="270px">
+            </a>
+           
+        </div>
+
+        <div>
+            <nav class="navbar">
+              <ul class="nav--list">
+                <!--<li class="item"> <a href="#">Login</a></li>
+                <li class="item"><a href="#">Sign Up</a></li>-->
+                <li class="item" id="log-out"><a href="#">Log Out</a></li>
+      
+              </ul>
+            </nav>
+          </div>
+
+
+    </header>
+
+    
+    <div class="container">
+    <div id="songLibrary">
+        <h1>Song Library</h1>
+        <button id="clearStorageBtn" style="display: none">Clear Local Storage</button>
+
+
+        <ul id="songList"></ul>
+    </div>
+    <div class="formbold-main-wrapper">
+        <div class="formbold-form-wrapper">
+          <form id="songSubmissionForm" enctype="multipart/form-data">
+            <div class="formbold-mb-5">
+              <label for="songName" class="formbold-form-label">Song Name:</label>
+              <input
+                type="text"
+                name="songName"
+                id="songName"
+                placeholder="Enter song name"
+                class="formbold-form-input"
+                required
+              />
+            </div>
+      
+            <div class="formbold-mb-5">
+              <label for="artist" class="formbold-form-label">Artist:</label>
+              <input
+                type="text"
+                name="artist"
+                id="artist"
+                placeholder="Enter artist name"
+                class="formbold-form-input"
+                required
+              />
+            </div>
+
+            <div class="formbold-mb-5">
+                <label for="BPM" class="formbold-form-label">BPM:</label>
+                <input
+                  type="text"
+                  name="BPM"
+                  id="BPM"
+                  placeholder="Enter BPM"
+                  class="formbold-form-input"
+                  required
+                />
+              </div>
+      
+            <!-- Customized File Upload Section -->
+            <div class="mb-6 pt-4">
+              <label class="formbold-form-label formbold-form-label-2">Upload Sheet Music</label>
+      
+              <div class="formbold-mb-5 formbold-file-input">
+                <input 
+                type="file" 
+                name="sheetMusic" 
+                id="sheetMusic" 
+                required />
+                <label for="sheetMusic">
+                  <div>
+                    <span class="formbold-drop-file"> Drop files here </span>
+                    <span class="formbold-or"> Or </span>
+                    <span class="formbold-browse"> Browse </span>
+                  </div>
+                </label>
+              </div>
+      
+              <div class="formbold-file-list formbold-mb-5">
+                <div class="formbold-file-item" id="sheetMusicFileName">
+                  <!-- Display selected file name here -->
+                  
+                </div>
+                <button id="delete-file">X</button>
+                
+                
+
+              </div>
+            </div>
+      
+            <div class="formbold-mb-5">
+              <label for="youtubeLink" class="formbold-form-label">YouTube Link:</label>
+              <input
+                type="url"
+                name="youtubeLink"
+                id="youtubeLink"
+                placeholder="Enter YouTube link"
+                class="formbold-form-input"
+              />
+            </div>
+      
+            <div>
+              <button type="submit" class="formbold-btn">Add Song</button>
+              <button type="reset" class="formbold-btn" id="cancel-btn">Reset</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+      
+      <div class="table-body">
+        <div class="email-div">
+        
+        <input type="search" id="myInput" onkeyup="songSearch()" placeholder="Search Songs">
+
+
+        <button id="email-btn" class="email-btn">Send Email</button>
+      </div>
+ 
+
+
+      <div>
+      <table id="myTable" class="table table-dark">
+        <thead>
+          <tr>
+            <th class="selector"></th>
+            <th style="cursor: pointer" onclick="sortTable(1)" scope="col">Song Name</th>
+            <th style="cursor: pointer" onclick="sortTable(2)" scope="col">Artist Name</th>
+            <th scope="col">Chord Chart</th>
+            <th scope="col">Video Link</th>
+            <th style="cursor: pointer" scope="col" onclick="sortTable(5)">BPM</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody id="table-body" class="tbody">
+
+        </tbody>
+      </table>
+    </div>
+
+    </div>
+</body>
+</html>
+
+
+

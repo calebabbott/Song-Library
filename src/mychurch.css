@@ -1,0 +1,463 @@
+body {
+    background-color: #002a3a;
+    font-family: "Playfair Display", Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+   
+}
+
+#sp-header {
+    display: flex; /* Ensures that the elements inside the header are aligned in a row */
+    justify-content: space-between; /* Pushes the logo to the left and the nav to the right */
+    align-items: center; /* Vertically aligns the logo and nav */
+    box-sizing: border-box;
+    background-color: #003b49;
+    padding: 10px;
+    min-height: 70px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 15px 20px -5px;
+}
+
+#sp-logo {
+    padding: 15px;
+    white-space: nowrap;
+    order: 0;
+    color: #FFFFFF;
+    font-family: "Playfair Display", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.7em;
+    line-height: 1em;
+    text-transform: none;
+    letter-spacing: 0em;
+    background-color: transparent;
+
+}
+
+
+
+
+*,
+::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  height: 80px;
+  width: auto;
+  border-radius: 10px;
+}
+
+.nav--list {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+  }
+  
+ .item {
+    position: relative;
+    width: 180px;
+    height: 40px;
+    padding: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+    margin: 0 30px;
+    border: 2px solid #D6AA58;
+    overflow: hidden;
+  }
+  
+  .item a {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #D6AA58;
+    z-index: 10;
+    text-decoration: none;
+    transition: color 200ms ease;
+  }
+  
+  .item:hover a {
+    color: #003b49;
+  }
+  
+  .item:before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    transform: skew(30deg);
+    background: #D6AA58;
+    transition: width 400ms ease;
+  }
+  
+  .item:hover:before {
+    width: 120%;
+  }
+  
+  .item:nth-child(2):before {
+    transform: skew(-20deg);
+  }
+  
+  .item:nth-child(3):before {
+    transform: skew(0deg);
+  }
+  
+  .item:nth-child(4):before {
+    width: 180px;
+    height: 0%;
+    bottom: 0px;
+    transition: height 400ms ease;
+  }
+  
+  .item:nth-child(4):hover:before {
+    height: 100%;
+  } 
+
+h1 {
+    color: white;
+    padding: 15px;
+    
+
+}
+
+  
+#songLibrary{
+    margin-top: 30px;
+    color: white;
+
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+
+.formbold-main-wrapper {
+    padding: 15px;
+    
+
+}
+
+.formbold-form-wrapper {
+    max-width: 100%;
+    width: 100%;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 15px 20px -5px;
+    background-color: #003b49;
+    
+}
+
+.formbold-form-label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    font-weight: 600;
+    color: white
+
+}
+
+.formbold-form-input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    color: #07074D;
+    font-size: 14px;
+}
+
+.formbold-file-input input[type="file"] {
+    display: none;
+}
+
+.formbold-file-input label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    border: 2px dashed #e0e0e0;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    color: #07074D;
+    cursor: pointer;
+    text-align: center;
+}
+
+.formbold-drop-file,
+.formbold-or,
+.formbold-browse {
+    display: inline-block;
+    font-size: 14px;
+}
+
+.formbold-browse {
+    font-weight: bold;
+    color: #4a90e2;
+}
+
+.formbold-file-list {
+    margin-top: 10px;
+    color: black;
+}
+
+.formbold-file-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: white;
+}
+
+.formbold-file-item svg {
+    cursor: pointer;
+}
+
+.formbold-btn {
+    display: inline-block;
+    width: 25%;
+    background-color: #003b49;
+    font-weight: 300;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-right: 5px;
+    border: 2px solid #D6AA58;
+    text-transform: uppercase;
+    color: #D6AA58;   
+}
+
+.formbold-btn:hover {
+    background-color: #D6AA58;
+    color: #003b49;
+}
+
+.table-dark {
+    color: white;
+    background-color: #003b49;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 15px 20px -5px;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: .75rem;
+
+
+}
+
+table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    unicode-bidi: isolate;
+    border-spacing: 2px;
+    border-color: gray;
+    border-radius: 6px;   
+    margin-top: 1rem;
+
+}
+
+.table-body {
+    height: auto;
+    padding: 15px;
+    padding-bottom: 50px;
+
+}
+
+.tbody {
+    margin-bottom: 100px;
+
+}
+
+.container {
+    margin: 10px 50px;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.delete-btn {
+    display: inline-block;
+    background-color: #003b49;
+    color: #fff;
+    font-weight: 300;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+    border: 0px #D6AA58;
+    text-transform: uppercase;
+    color: #D6AA58;  
+    width: auto;
+}
+
+
+#myInput {
+    border-radius: 6px;
+    padding: 10px;
+    width: 100%;
+
+}
+
+th {
+    font-size: 18px;
+    padding-bottom: 15px;
+}
+
+.selector {
+ padding-right: 20px;
+}
+
+.select-row {
+    transform: scale(1.3);
+}
+
+#delete-file {
+    border: 0px;
+    background-color: transparent;
+    color: #D6AA58;
+    cursor: pointer;
+    
+}
+
+.email-div {
+    background-color: #003b49;
+    padding: 5px;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 15px 20px -5px;
+
+}
+
+.email-btn {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background-color: transparent;
+    color: #D6AA58;
+    border: none;
+    padding: 7px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.email-btn:hover {
+    background-color: #4a90e2;
+}
+
+hr { 
+   background-color: #2F3E53;
+   opacity: .4;
+   
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------
+login.html:
+*/
+.login-body, .login-html {
+    height: 100%;
+    margin: 0;
+}
+
+.login-wrapper {
+
+    width: 390px;
+    height: 95%;
+    min-height: 600px;          
+    
+    display: flex;           /* Center content inside the square (optional) */
+    justify-content: center;
+    align-items: center;
+  
+    margin: auto;            /* Horizontal centering */
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); /* Vertical centering */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 15px 20px -5px;
+
+    border-radius: 15px;
+    background-color: #fff;
+
+}
+
+.auth-sect {
+    margin: 16px 150px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+.login-title {
+    font-size: 35px;
+    font-weight:lighter;
+    
+}
+
+.logo {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.login-input {
+    padding: 10px;
+    width: 300px;
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: #adadad;
+    font-size: 15px;
+    margin-bottom: 45px;
+}
+
+.submit-btn {
+    width: 300px;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    border: 2px solid #D6AA58;
+    color: #003b49;
+    background-color: #D6AA58;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #d39a30;
+}
+
+#login-error { 
+    color: red;
+    margin-bottom: 15px;
+    font-size: 12px;
+}
+
+
+
+
+
+
