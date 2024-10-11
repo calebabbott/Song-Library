@@ -1,7 +1,7 @@
 import "./mychurch.css";
 import { createClient } from '@supabase/supabase-js'
-const supabaseUrl = ''
-const supabaseKey = process.env.SUPABASE_KEY;
+const supabaseUrl = '' //Add your SupaBase URL 
+const supabaseKey = process.env.SUPABASE_KEY; //Create .env file for your SupaBase Key
 const supabase = createClient(supabaseUrl, supabaseKey)
 const logOut = document.getElementById('log-out');
 
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         console.error('Error getting public URL:', urlError);
 
     } else {
-            console.log('Public URL:', data.publicUrl); // Log the public URL
+            console.log('Public URL:', data.publicUrl); // Log the public URL for files
 
     }
     
@@ -303,7 +303,6 @@ document.addEventListener('DOMContentLoaded', async function () {
 
         if (error) {
             console.error('Error logging out:', error.message);
-            // Optionally display an error message to the user
         } else {
             console.log('Logout successful:');
             // Redirect to mychurch.html upon successful login
@@ -374,11 +373,10 @@ const checkSession = async () => {
 
     if (error) {
         console.error('Error retrieving session:', error.message);
-        // Optional: You can handle the error as needed
     } else {
         if (!session && window.location.pathname.includes('mychurch.html')) {
             // No active session, redirect to login page
-            window.location.href = 'login.html'; // Adjust the path as needed
+            window.location.href = 'login.html'; 
         } else if (session && window.location.pathname.includes('login.html')) {
             window.location.href = 'mychurch.html'
         }
@@ -391,7 +389,7 @@ const checkSession = async () => {
 const confirmDelete = async () => {
     let result = confirm("Are you sure you want to delete this song?");
 
-    // If the user confirms, proceed with deletion
+    // If the user confirms, proceed with delete
     if (result) {
         try {
             // Remove the row from the UI
