@@ -12,7 +12,7 @@ const __dirname = dirname(__filename);
 
 app.use(cors());
 
-app.use(express.static('dist')); 
+app.use(express.static('src')); 
 
 // Route to serve the main HTML file
 app.get('/', (req, res) => {
