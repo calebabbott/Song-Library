@@ -1,7 +1,7 @@
 import "./mychurch.css";
 import { createClient } from '@supabase/supabase-js'
-const supabaseUrl = 'https://orkwbhcnpbjwvyfundlb.supabase.co'
-const supabaseKey = process.env.SUPABASE_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9ya3diaGNucGJqd3Z5ZnVuZGxiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mjc1NTE1NjYsImV4cCI6MjA0MzEyNzU2Nn0.J9b3r1i3JEf7AM288bHsE_VzXFBJVJ-1w1Fzv6Rz7xI';
+const supabaseUrl = ''
+const supabaseKey = process.env.SUPABASE_KEY || '';
 const supabase = createClient(supabaseUrl, supabaseKey)
 const logOut = document.getElementById('log-out');
 
