@@ -1,4 +1,4 @@
-import supabase from './mychurch.js'; // Adjust the import path as needed
+import supabase from './index.js'; // Adjust the import path as needed
 let loginError = document.getElementById('login-error');
 
 document.getElementById('login-form').addEventListener('submit', async function(e) {
@@ -20,7 +20,7 @@ document.getElementById('login-form').addEventListener('submit', async function(
         
     } else {
         console.log('Login successful:', data);
-        // Redirect to mychurch.html upon successful login
+        // Redirect to index.html upon successful login
         window.location.href = 'mychurch.html'; // Adjust the path as needed
     }
 });
